@@ -42,10 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Setelah berhasil, arahkan kembali ke halaman dashboard
         header('Location: dashboard_admin.php');
         exit();
-    } else {
+    } else { 
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-
     // Tutup koneksi ke database
     mysqli_close($conn);
 }
